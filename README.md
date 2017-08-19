@@ -1,6 +1,6 @@
 # SnakeGame
 JS版贪吃蛇组件
-
+1.1 初级示例
 简单示例如下：
 ```html
 <!DOCTYPE html>
@@ -46,11 +46,11 @@ JS版贪吃蛇组件
 </html>
 ```
 下面介绍游戏配置参数 
-#### 2.2 公有方法
+#### 1.2 公有方法
 - startGame() ： 开始游戏。在该方法内，会初始化各种设置。如，重置分数，蛇身，速度等。
 - changeGameStatus()：改变游戏状态，即暂停和开始，SnakeGame对象里面有一个私有变量，作为游戏的状态变量。
 
-#### 2.3 配置游戏参数的对象gameConfigObj属性、
+#### 1.3 配置游戏参数的对象gameConfigObj属性、
 gameConfigObj 对象一共该有10个属性，3个回调函数
 
 **属性**
@@ -70,7 +70,7 @@ gameConfigObj 对象一共该有10个属性，3个回调函数
 - onGamePause : 事件，游戏状态改变时，调用该方法，带有一个参数  1，代表暂停，0 ，代表游戏在进行。
 - onGameOver : 事件，游戏结束时，调用该方法。
 
-更多例子参看：http://www.cnblogs.com/mingjiatang/p/7397786.html
+更多例子参看：http://www.cnblogs.com/mingjiatang/p/7397803.html
 
 
 
