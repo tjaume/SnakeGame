@@ -70,7 +70,7 @@ gameConfigObj 对象一共该有10个属性，3个回调函数
 - onGamePause : 事件，游戏状态改变时，调用该方法，带有一个参数  1，代表暂停，0 ，代表游戏在进行。
 - onGameOver : 事件，游戏结束时，调用该方法。
 
-更多例子参看：
+更多例子参看：http://www.cnblogs.com/mingjiatang/p/7397786.html
 
 
 
