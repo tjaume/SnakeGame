@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贪吃蛇组件</title>
+    <style type="text/css">
+        *{
+            margin:0px;
+            padding:0px;
+        }
+
+        #gamebd{
+            width:850px;
+            margin:50px auto;
+
+        }
+
+
+        #gameScense{
+            background-color:green;
+            float:left;
+        }
+
+        #gameSet{
+            margin-left:10px;
+            float:left;
+        }
+
+        .gameBoxStyle{
+
+            margin-bottom:7px;
+            padding:5px 10px;
+        }
+
+        .gameBoxStyle h3{
+            margin-bottom:7px;
+        }
+        .gameBoxStyle p{
+            line-height: 1.7em;
+        }
+
+        .gameBoxStyle input{
+            margin-top:7px;
+            background-color: white;
+            border:1px gray solid;
+            padding:3px 9px;
+            margin-right:9px;
+        }
+        .gameBoxStyle input[type=text]{
+            width:90px;
+        }
+        .gameBoxStyle input:hover{
+            background-color: #e2fff2;
+        }
+
+        .gameBoxStyle #txtValue{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<div id="gamebd">
+    <canvas id="gameScense" width="600" height="600">
+
+    </canvas>
+    <div id="gameSet">
+        <div id="gameControl" class="gameBoxStyle">
+            <h3>游戏控制</h3>
+            <p>方向键：上,下,左,右</p>
+            <p>开始/暂停：空格</p>
+        </div>
+        <div id="gameStatus" class="gameBoxStyle">
+            <h3>游戏状态</h3>
+            <p>用户名：<input type="text" placeholder="输入用户名:" id="txtUserName" value="游客123"/> </p>
+            <p>当前用户1得分：<span id="txtValue">0</span></p>
+            <input type="button" value="开始游戏" id="btnStart"/>
+            <input type="button" value="暂停" id="btnPause"/>
+        </div>
+        <div id="game" class="gameBoxStyle">
+            <h3>游戏记录</h3>
+            <a href="#">查看历史记录</a>
+        </div>
+    </div>
+</div>
+<script src="js/SnakeGame.js"></script>
+</body>
+<script src="SnakeGame.js"></script>
+<script>
+    var btnStart=document.getElementById("btnStart");
+    var btnPasue=document.getElementById("btnPause");
+
+    var gameSnake = new SnakeGame("gameScense",{
+        snakeColor:"red",
+        onCountChange:function(count){
+            var txtScore=document.getElementById("txtValue");
+            txtScore.innerText=count.toString( );
+            txtScore=null;
+        },
+        onGamePause:function(status){
+            if(status){
+                btnPasue.value = "开始";
+            }else {
+                btnPasue.value = "暂停"
+            }
+        },
+        onGameOver:function (status) {
+            alert("游戏结束");
+        }
+    });
+
+    btnStart.onclick=function(event){
+        if(checkUserName()){
+            gameSnake.startGame();
+            btnStart.blur();
+        }
+    }
+
+    btnPasue.onclick=function(event) {
+        gameSnake.changeGameStatus();
+        btnStart.blur();
+    }
+    function checkUserName(){
+        var txtUserName = document.getElementById("txtUserName");
+        if(txtUserName.value.length==0){
+            alert("用户名不能为空");
+            return false;
+        }else {
+            return true;
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jaume's贪吃蛇</title>
+    <link rel="stylesheet" href="css/gameStyle.css">
+
+</head>
+<body>
+<div id="gamebd">
+    <canvas id="gameScense" width="600" height="600">
+
+    </canvas>
+    <canvas id="gameScense1" width="600" height="600" style="background-color: black">
+
+    </canvas>
+
+    <div id="gameSet">
+        <div id="gameControl" class="gameBoxStyle">
+            <h3>游戏控制</h3>
+            <p>方向键：上,下,左,右</p>
+            <p>开始/暂停：空格</p>
+        </div>
+        <div id="gameStatus" class="gameBoxStyle">
+            <h3>游戏状态</h3>
+            <p>当前用户1得分：<span id="txtValue">0</span></p>
+            <p>当前用户2得分：<span id="txtValue1">0</span></p>
+            <input type="button" value="开始游戏" id="btnStart"/>
+        </div>
+        <div id="game" class="gameBoxStyle">
+            <h3>游戏记录</h3>
+            <a href="#">查看历史记录</a>
+        </div>
+    </div>
+</div>
+<script src="js/SnakeGame.js"></script>
+<script src="js/UIScript.js"></script>
+</body>
+</html>

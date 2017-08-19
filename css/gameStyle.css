@@ -1,0 +1,52 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+#gamebd{
+    /*width:850px;*/
+    /*margin:50px auto;*/
+    width:100%;
+}
+
+
+#gameScense{
+    background-color:green;
+    float:left;
+}
+
+#gameSet{
+    margin-left:10px;
+    float:left;
+}
+
+.gameBoxStyle{
+
+    margin-bottom:7px;
+    padding:5px 10px;
+}
+
+.gameBoxStyle h3{
+    margin-bottom:7px;
+}
+.gameBoxStyle p{
+    line-height: 1.7em;
+}
+
+.gameBoxStyle input{
+    margin-top:7px;
+    background-color: white;
+    border:1px gray solid;
+    padding:3px 9px;
+    margin-right:9px;
+}
+.gameBoxStyle input[type=text]{
+    width:90px;
+}
+.gameBoxStyle input:hover{
+    background-color: #e2fff2;
+}
+
+.gameBoxStyle #txtValue{
+    color:red;
+}
