@@ -241,7 +241,7 @@ var SnakeGame = function () {
                 snakeMove();
                 runId = setTimeout(arguments.callee,curSpeed);
             }else {
-                triggerEvent(onGameOver, null);
+                triggerEvent(onGameOver, count);
                 return;
             }
         }
