@@ -68,7 +68,7 @@ gameConfigObj 对象一共该有10个属性，3个回调函数
 **回调函数**
 - onCountChange : 事件，每一个食物，分数改变，并调用该方法，带有一个参数（count)
 - onGamePause : 事件，游戏状态改变时，调用该方法，带有一个参数  1，代表暂停，0 ，代表游戏在进行。
-- onGameOver : 事件，游戏结束时，调用该方法。
+- onGameOver : 事件，游戏结束时，调用该方法。带有有一个参数（count),游戏结束时的分数。
 
 更多例子参看：http://www.cnblogs.com/mingjiatang/p/7397803.html
 
